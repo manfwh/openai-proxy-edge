@@ -12,6 +12,7 @@ export default async function handler(req: NextRequest) {
   let urlHostname = url.hostname
   url.protocol = 'https:'
   url.host = 'api.openai.com'
+  url.pathname = '/v1/chat/completions'
 
   let reqHeaders = req.headers
   let newReqHeaders = new Headers(reqHeaders)
