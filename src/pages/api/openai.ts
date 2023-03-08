@@ -6,6 +6,7 @@ export const config = {
 
 export default async function handler(req: NextRequest) {
   console.log('req.method', req.method)
+  console.log('req.url', req.url)
   let method = req.method
   let url = new URL(req.url)
   let urlHostname = url.hostname
