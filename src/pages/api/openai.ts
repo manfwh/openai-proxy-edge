@@ -18,7 +18,7 @@ export default async function handler(req: NextRequest) {
   newReqHeaders.set('HOST', url.host)
   newReqHeaders.set('Referer', url.protocol + '//' + urlHostname)
 
-  let originalRes = await fetch(url.href, {
+  let originalRes = await fetch(url.href + '/v1/chat/completions', {
     method,
     headers: newReqHeaders,
     body: req.body
